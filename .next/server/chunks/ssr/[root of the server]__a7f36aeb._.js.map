@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/palmi/OneDrive/Desktop/videocall/src/app/ClientProvider.jsx"],"sourcesContent":["\"use client\";\r\nimport React from \"react\";\r\nimport AgoraRTC, { AgoraRTCProvider } from \"agora-rtc-react\";\r\nfunction ClientProvider({ children }) {\r\n  return (\r\n    <AgoraRTCProvider\r\n      client={AgoraRTC.createClient({ mode: \"rtc\", codec: \"vp8\" })}\r\n    >\r\n      {children}\r\n    </AgoraRTCProvider>\r\n  );\r\n}\r\n\r\nexport default ClientProvider;\r\n"],"names":[],"mappings":";;;;AACA;AACA;AAFA;;;;AAGA,SAAS,eAAe,EAAE,QAAQ,EAAE;IAClC,qBACE,8OAAC,uKAAA,CAAA,mBAAgB;QACf,QAAQ,uKAAA,CAAA,UAAQ,CAAC,YAAY,CAAC;YAAE,MAAM;YAAO,OAAO;QAAM;kBAEzD;;;;;;AAGP;uCAEe","debugId":null}}]
+}
