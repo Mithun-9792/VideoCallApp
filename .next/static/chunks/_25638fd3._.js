@@ -14,49 +14,53 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 var _s = __turbopack_context__.k.signature();
-"use client"; // Ensure this runs only on the client
+"use client";
 ;
 ;
-const AgoraRTC = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(_c = ()=>__turbopack_context__.r("[project]/node_modules/agora-rtc-sdk-ng/AgoraRTC_N-production.js [app-client] (ecmascript, next/dynamic entry, async loader)")(__turbopack_context__.i), {
+const AgoraRTCProvider = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_context__.r("[project]/node_modules/agora-rtc-react/dist/agora-rtc-react.mjs [app-client] (ecmascript, next/dynamic entry, async loader)")(__turbopack_context__.i).then((mod)=>mod.AgoraRTCProvider), {
     loadableGenerated: {
         modules: [
-            "[project]/node_modules/agora-rtc-sdk-ng/AgoraRTC_N-production.js [app-client] (ecmascript, next/dynamic entry)"
+            "[project]/node_modules/agora-rtc-react/dist/agora-rtc-react.mjs [app-client] (ecmascript, next/dynamic entry)"
         ]
     },
     ssr: false
 });
-_c1 = AgoraRTC;
-function ClientProvider({ children }) {
+_c = AgoraRTCProvider;
+const ClientProvider = ({ children })=>{
     _s();
-    const [client, setClient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [agoraClient, setAgoraClient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ClientProvider.useEffect": ()=>{
             if ("TURBOPACK compile-time truthy", 1) {
-                const agoraClient = AgoraRTC.createClient({
-                    mode: "rtc",
-                    codec: "vp8"
-                });
-                setClient(agoraClient);
+                __turbopack_context__.r("[project]/node_modules/agora-rtc-react/dist/agora-rtc-react.mjs [app-client] (ecmascript, async loader)")(__turbopack_context__.i).then({
+                    "ClientProvider.useEffect": (mod)=>{
+                        const AgoraRTC = mod.default;
+                        const client = AgoraRTC.createClient({
+                            mode: "rtc",
+                            codec: "vp8"
+                        });
+                        setAgoraClient(client);
+                    }
+                }["ClientProvider.useEffect"]);
             }
         }
     }["ClientProvider.useEffect"], []);
-    if (!client) return null; // Render nothing until the client is ready
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AgoraRTC.AgoraRTCProvider, {
-        client: client,
+    if (!agoraClient) return null; // Prevent rendering before AgoraRTC loads
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AgoraRTCProvider, {
+        client: agoraClient,
         children: children
     }, void 0, false, {
         fileName: "[project]/src/app/ClientProvider.jsx",
-        lineNumber: 21,
-        columnNumber: 5
+        lineNumber: 25,
+        columnNumber: 10
     }, this);
-}
-_s(ClientProvider, "lRani6Q9/nBEsoa1p7AhzaLBb/o=");
-_c2 = ClientProvider;
+};
+_s(ClientProvider, "xUXZAnzoVb9Qk7tSFAmVv7hf2ZA=");
+_c1 = ClientProvider;
 const __TURBOPACK__default__export__ = ClientProvider;
-var _c, _c1, _c2;
-__turbopack_context__.k.register(_c, "AgoraRTC$dynamic");
-__turbopack_context__.k.register(_c1, "AgoraRTC");
-__turbopack_context__.k.register(_c2, "ClientProvider");
+var _c, _c1;
+__turbopack_context__.k.register(_c, "AgoraRTCProvider");
+__turbopack_context__.k.register(_c1, "ClientProvider");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }

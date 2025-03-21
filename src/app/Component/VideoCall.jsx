@@ -12,6 +12,9 @@ import AgoraRTC, {
 } from "agora-rtc-react";
 
 export default function VideoCall() {
+  if (typeof window === "undefined") {
+    return null; // Prevents rendering on the server
+  }
   const [appId, setAppId] = useState("4e4f366a04334ff19d2205abd577b0bb");
   const [channel, setChannel] = useState("test");
   const [token, setToken] = useState(null);
@@ -24,26 +27,28 @@ export default function VideoCall() {
   const [localCameraTrack, setLocalCameraTrack] = useState(null);
 
   useEffect(() => {
-    async function initTracks() {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: true,
-          audio: true,
-        });
+    if (typeof window !== "undefined" && (micOn || cameraOn)) {
+      async function initTracks() {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: true,
+          });
 
-        const micTrack = await AgoraRTC.createMicrophoneAudioTrack();
-        const camTrack = await AgoraRTC.createCameraVideoTrack();
+          const micTrack = await AgoraRTC.createMicrophoneAudioTrack();
+          const camTrack = await AgoraRTC.createCameraVideoTrack();
 
-        setLocalMicrophoneTrack(micTrack);
-        setLocalCameraTrack(camTrack);
-      } catch (error) {
-        console.error("Error accessing camera/microphone:", error);
+          setLocalMicrophoneTrack(micTrack);
+          setLocalCameraTrack(camTrack);
+        } catch (error) {
+          console.error("Error accessing camera/microphone:", error);
+        }
       }
-    }
-
-    if (micOn || cameraOn) {
       initTracks();
     }
+
+    // if (micOn || cameraOn) {
+    // }
   }, [micOn, cameraOn]);
 
   usePublish([localMicrophoneTrack, localCameraTrack]);
@@ -128,7 +133,7 @@ export default function VideoCall() {
           />
           <input
             type="text"
-            value={token}
+            value={token || ""}
             onChange={(e) => setToken(e.target.value)}
             placeholder="Token (Optional)"
             className="p-2 bg-gray-800 border border-gray-600 rounded-lg w-64"

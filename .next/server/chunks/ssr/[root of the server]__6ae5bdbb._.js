@@ -28,35 +28,35 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/shared/lib/app-dynamic.js [app-ssr] (ecmascript)");
 ;
-"use client"; // Ensure this runs only on the client
+"use client";
 ;
 ;
 ;
-const AgoraRTC = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_context__.r("[project]/node_modules/agora-rtc-sdk-ng/AgoraRTC_N-production.js [app-ssr] (ecmascript, next/dynamic entry, async loader)")(__turbopack_context__.i), {
+const AgoraRTCProvider = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_context__.r("[project]/node_modules/agora-rtc-react/dist/agora-rtc-react.mjs [app-ssr] (ecmascript, next/dynamic entry, async loader)")(__turbopack_context__.i).then((mod)=>mod.AgoraRTCProvider), {
     loadableGenerated: {
         modules: [
-            "[project]/node_modules/agora-rtc-sdk-ng/AgoraRTC_N-production.js [app-client] (ecmascript, next/dynamic entry)"
+            "[project]/node_modules/agora-rtc-react/dist/agora-rtc-react.mjs [app-client] (ecmascript, next/dynamic entry)"
         ]
     },
     ssr: false
 });
-function ClientProvider({ children }) {
-    const [client, setClient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+const ClientProvider = ({ children })=>{
+    const [agoraClient, setAgoraClient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if ("TURBOPACK compile-time falsy", 0) {
             "TURBOPACK unreachable";
         }
     }, []);
-    if (!client) return null; // Render nothing until the client is ready
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AgoraRTC.AgoraRTCProvider, {
-        client: client,
+    if (!agoraClient) return null; // Prevent rendering before AgoraRTC loads
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AgoraRTCProvider, {
+        client: agoraClient,
         children: children
     }, void 0, false, {
         fileName: "[project]/src/app/ClientProvider.jsx",
-        lineNumber: 21,
-        columnNumber: 5
+        lineNumber: 25,
+        columnNumber: 10
     }, this);
-}
+};
 const __TURBOPACK__default__export__ = ClientProvider;
 }}),
 "[project]/node_modules/next/dist/server/route-modules/app-page/module.compiled.js [app-ssr] (ecmascript)": (function(__turbopack_context__) {

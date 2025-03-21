@@ -1,1 +1,20 @@
-{}
+{
+  "[project]/node_modules/agora-rtc-react/dist/agora-rtc-react.mjs [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/node_modules/agora-rtc-react/dist/agora-rtc-react.mjs [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_agora-rtc-react_dist_agora-rtc-react_mjs_0b621152._.js",
+      "static/chunks/node_modules_agora-rtc-react_dist_agora-rtc-react_mjs_cc611cca._.js",
+      "static/chunks/node_modules_next_dist_compiled_buffer_index_feebad72.js",
+      "static/chunks/node_modules_agora-rtc-react_dist_agora-rtc-react_mjs_a4d9f7a9._.js"
+    ]
+  },
+  "[project]/src/app/Component/VideoCall.jsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/app/Component/VideoCall.jsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_agora-rtc-react_dist_agora-rtc-react_mjs_0b621152._.js",
+      "static/chunks/node_modules_next_dist_compiled_buffer_index_feebad72.js",
+      "static/chunks/src_app_Component_VideoCall_jsx_886cfe42._.js",
+      "static/chunks/src_app_Component_VideoCall_jsx_905d7a57._.js"
+    ]
+  }
+}
