@@ -64,7 +64,7 @@ export default function VideoCall() {
           <div className="grid grid-cols-2 gap-4">
             <div className="w-64 h-64 bg-gray-700 flex items-center justify-center rounded-lg">
               <LocalUser
-                audioTrack={localMicrophoneTrack}
+                // audioTrack={localMicrophoneTrack}
                 videoTrack={localCameraTrack}
                 cameraOn={cameraOn}
                 micOn={micOn}
